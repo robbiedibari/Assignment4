@@ -1,4 +1,4 @@
-public class Manager  extends Employee {
+public class Manager extends Employee {
     public Manager() {
         this("E000", "No name", "no department", 0.0, "no designation");
     }

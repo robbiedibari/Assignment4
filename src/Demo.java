@@ -5,7 +5,7 @@ public class Demo {
         Manager a = new Manager("E001","Mark","HR",15000,"Manager");
         Manager b = new Manager("E012","Peter","R&D",15000,"Manager");
         Clerk c = new Clerk("E056","Samuel","Accounts",10000,"Clerk");
-        Employee d = new Employee("E089","Gabriel","H&R",12500.0,"New Hire");
+        Employee d = new Employee("E089","Gabriel","H&R",10000.0,"New Hire");
 
 
 
