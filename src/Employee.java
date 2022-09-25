@@ -75,18 +75,24 @@ public class Employee {
     public String getDesignation(){
         return designation;
     }
-    public double addBonus(double salary){
-        return salary += 200;
+
+    public double addBonus(){
+        double bonus = 200;
+        return getSalary() + bonus;
     }
+
+    public double deduction(double absentDays, double totalDays){
+            return addBonus() - (addBonus()*(absentDays/totalDays));
+    }
+
 
     public String toString (){
         return "Employee ID : " + getEmployeeID() + "\n" + "Employee Name : " + getName() + "\n" +
-                "Department name: " + getDepartment() + "\n" + "Salary: " + getSalary() + "\n" + "Designation: " + getDesignation();
+                "Department name: " + getDepartment() + "\n" + "Salary: " + getSalary() + "\n" + "Designation: " + getDesignation() + "\n" + "Salary after adding bonus is : " + addBonus();
     }
     public boolean equal(Employee otherEmployee){
         return (EmployeeID.equals(otherEmployee.EmployeeID) && name.equals(otherEmployee.name) && department.equals(otherEmployee.department) && (salary == otherEmployee.salary) && designation.equals(otherEmployee.designation));
     }
-    // override the equals method.  where employee can check if their designation is identical
 
 
 }

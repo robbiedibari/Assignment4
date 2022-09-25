@@ -6,12 +6,17 @@ public class Clerk extends Employee{
         super(EmployeeID,name,department,salary,designation);
     }
 
-    public double addBonus(double salary){
-        return salary += 100 ;
+    public double addBonus(){
+            double bonus = 100;
+        return getSalary() + bonus;
+    }
+    public double deduction(double absentDays, double totalDays){
+        return addBonus() - (addBonus() * (absentDays/totalDays));
     }
 
-    public String toString(){
-        return super.toString() + "\n" + "Salary after adding the Bonus is : " + addBonus(getSalary());
-    }
+
+//    public String toString(){
+//        return super.toString() + "\n" + "Salary after adding the Bonus is : " + addBonus();
+//    }
 }
 
